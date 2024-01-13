@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
   $name = mysqli_real_escape_string($conn, $_POST['name']);
 
 
-  $select = mysqli_query($conn, "SELECT * FROM `parkdb` WHERE name = '$name'") or die('query failed');
+  $select = mysqli_query($conn, "SELECT * FROM parkdb WHERE name = '$name'") or die('query failed');
   
   if(mysqli_num_rows($select) > 0){
      $row = mysqli_fetch_assoc($select);
@@ -24,10 +24,17 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function printTable() {
+    window.print();
+}
+</script>
+
 <meta charset="utf-8">
 <title>RESERVED</title>
 <link rel="icon" href="sm.png">
 <link rel="stylesheet" href="styleindex.css"/>
+
 </head>
 <style>
   body {
@@ -112,7 +119,7 @@ if(isset($_POST['submit'])){
             </div>  
     </form>
     <form class="rightcolumn" style="margin-top:14px; border-radius:12px;">
-    <h2 style="padding-left:700px; margin-left:43px; color: white; text-shadow: 4px 4px 5px #000000;">RESERVED PARKING</h2>
+    <h2 style="padding-left:250px; margin-left:43px; color: white; text-shadow: 4px 4px 5px #000000;">RESERVED PARKING</h2>
         <table width="100%" border="30" style="border:dotted;box-shadow: 10px 10px 5px lightblue;">
         <thead>
         <tr>
@@ -140,15 +147,8 @@ if(isset($_POST['submit'])){
         <td align="center"><?php echo $row["name"]; ?></td>
         <td align="center"><?php echo $row["amount"]; ?></td>
         <td align="center">
-        <a href="b1slot.php? <span></span>id=<?php echo $row["id"] && $row["name"];?>"><img src="view.png" style="height:20px;width:20px;"></a>
-        
-        
-        <a href="b1remove.php?id=<?php echo $row["id"]; ?>"><img src="edit.png" style="height:20px;width:20px;"></a>
-        
-        
+        <a href="b1slot.php? <span></span>id=<?php echo $row["id"] && $row["name"];?>"><img src="view.png" style="height:20px;width:20px;"></a>  
         <a href="print.php?id=<?php echo $row["id"]; ?>"><img src="printer.png" style="height:20px;width:20px;"></a>
-        
-        
         <a href="b1remove.php?id=<?php echo $row["id"]; ?>"><img src="bin.png" style="height:20px;width:20px;"></a>
        
         </tr>
@@ -156,6 +156,14 @@ if(isset($_POST['submit'])){
         </tbody>
         </table>
         </div>
+        <form class="rightcolumn" style="margin-top:14px; border-radius:12px;">
+    <h2 style="padding-left:250px; margin-left:43px; color: white; text-shadow: 4px 4px 5px #000000;">RESERVED PARKING</h2>
+    <!-- ... Your existing table code ... -->
+
+    <!-- Add a Print button -->
+    <button onclick="printTable()">Print</button>
+</form>
+
     </form>
     
 </div>

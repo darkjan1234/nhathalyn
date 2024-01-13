@@ -78,6 +78,7 @@ if(isset($_POST['submit'])){
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+  
 </style>
 <body>
 <div class="header">
@@ -87,7 +88,9 @@ if(isset($_POST['submit'])){
         <div class="row">
             <div class="leftcolumn" style="border-radius:8px;">
                 <div class="menu" style="overflow: auto;">
-                <img class="sm" src="sm.png" alt="smlogo" style="height: 120px;width: 120px; margin-left: 80px; margin-top: 45px; margin-bottom: 30px;">
+                <div class="picture_icon">
+                <img class="sm" src="sm.png" alt="smlogo123" style="height: 120px;width: 120px; margin-left: 20px; margin-top: 45px; margin-bottom: 30px;">
+                </div>
                 <a class="a" href="home.php">ADMIN</a>    
                 <a class="a" href="slotcar.php" style="background-color: #0161e7; color:white;">BOOK</a>
                 <a class="a" href="b1occupied.php">RESERVED</a>
@@ -152,20 +155,24 @@ if(isset($_POST['submit'])){
               updateClock();
               window.setInterval("updateClock()", 1);
             }
+
+
+            var car1 = []
             </script><br>
   </button>
     </div>  
         
     <div class="rightcolumn" style="margin-top:14px; border-radius:12px;">
-    <h2 style="padding-left:700px; margin-left:190px; color: white; text-shadow: 4px 4px 5px #000000;">BOOK</h2>
-        <div class="floor">
-            <p>Right Side</p>
-            <a href="b1car1.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
-            <a href="b1car2.php"><img class="img"  src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
-            <a href="b1car3.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
-            <a href="b1car4.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
-            <a href="b1car5.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
-        </div>
+    <h2 style="padding-left:0px; text-align:center; margin-left:0px; color: white; text-shadow: 4px 4px 5px #000000;">BOOK</h2>
+    <div class="floor" oncontextmenu="return false;" onselectstart="return false;">
+    <p>Right Side</p>
+    <a href="b1car1.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
+    <a href="b1car2.php"><img class="img"  src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
+    <a href="b1car3.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
+    <a href="b1car4.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
+    <a href="b1car5.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
+</div>
+
 <hr>
         <div class="floor">
             <p>Left Side</p>
