@@ -68,18 +68,19 @@ if ($result && $result->num_rows > 0) {
     $printableContent .= '<button onclick="saveAsPDF()">Save as PDF</button>';
     $printableContent .= '</table>
     <script>
-        function printTable() {
-            var printContents = document.body.innerHTML;
-            var originalContents = document.body.innerHTML;
-            document.body.innerHTML = printContents;
-            window.print();
-            document.body.innerHTML = originalContents;
-        }
-        function saveAsPDF() {
-          var element = document.body;
-          html2pdf(element);
-      }
-    </script>
+    function printTable() {
+        var printContents = document.getElementsByTagName("table")[0].outerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+    function saveAsPDF() {
+        var element = document.getElementsByTagName("table")[0];
+        html2pdf(element);
+    }
+</script>
 
     </html>';
 

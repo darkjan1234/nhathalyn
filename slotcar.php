@@ -162,9 +162,9 @@ if(isset($_POST['submit'])){
   </button>
     </div>  
         
-    <div class="rightcolumn" style="margin-top:14px; border-radius:12px;">
+    <div class="rightcolumn" style="margin-top:14px; border-radius:12px;  margin-left: auto; margin-right: auto;  ">
     <h2 style="padding-left:0px; text-align:center; margin-left:0px; color: white; text-shadow: 4px 4px 5px #000000;">BOOK</h2>
-    <div class="floor" oncontextmenu="return false;" onselectstart="return false;">
+    <div class="floor" oncontextmenu="return false;" onselectstart="return false; " style="display: flex; flex-wrap: nowrap; overflow-x: auto;" >
     <p>Right Side</p>
     <a href="b1car1.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
     <a href="b1car2.php"><img class="img"  src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
@@ -174,7 +174,7 @@ if(isset($_POST['submit'])){
 </div>
 
 <hr>
-        <div class="floor">
+        <div class="floor" style="display: flex; flex-wrap: nowrap; overflow-x: auto;">
             <p>Left Side</p>
             <a href="b1car6.php"><img class="img" src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
             <a href="b1car7.php"><img class="img"  src="images/parkcar.png" style="transform: rotate(40deg); height: 90px; width:130px;"></a>
